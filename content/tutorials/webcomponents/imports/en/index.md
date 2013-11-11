@@ -44,18 +44,18 @@ To detect support, check if `.import` exists on the `<link>` element:
       // Use other libraries/require systems to load files.
     }
 
-Browser support is still in the early days. Chrome 31 is the first browser to have an implementation. You can enable the flag by turning on **Enable HTML Imports** in `about:flags`. For other browsers, [Polymer's polyfill](http://www.polymer-project.org/platform/html-imports.html) works great until things are widely supported.
+Browser support is still in the early days. Chrome 31 is the first browser to have an implementation. You can **Enable HTML Imports** in `about:flags`. For other browsers, [Polymer's polyfill](http://www.polymer-project.org/platform/html-imports.html) works great until things are widely supported.
 
 <figure>
   <img src="aboutflag.png">
   <figcaption><b>Enable HTML Imports</b> in <code>about:flags</code>.</figcpation>
 </figure>
 
-<p class="notice tip">Also <b>Enable experimental Web Platform features</b> to get the other bleeding edge web component goodies.</p>
+<p class="notice tip">Also <b>Enable experimental Web Platform features</b> to get the other bleeding edge Web Component goodies.</p>
 
 <h3 id="bundling">Bundling resources</h3>
 
-Imports provide convention for bundling HTML/CSS/JS (even other HTML Imports) into a single deliverable. It's an intrinsic feature, but a powerful one. If you're creating a theme, library, or just want to segment your app into logical chunks, giving users a single URL is compelling. Heck, you could even deliver an entire app via an import. Think about that for a second.
+Imports provide a convention for bundling HTML/CSS/JS (even other HTML Imports) into a single deliverable. It's a powerful intrinsic feature. If you're creating a theme, library, or just want to segment your app into logical chunks, giving users a single URL is compelling. Heck, you could even deliver an entire app via an import. Think about that for a second.
 
 <blockquote class="commentary talkinghead">Using only one URL, you can package together a single relocatable bundle of web goodness for others to consume.
 </blockquote>
@@ -90,7 +90,7 @@ Let this sit. It's exciting stuff.
 <h3 id="events">Load/error events</h3>
 
 The `<link>` element fires a `load` event when an import is loaded successfully
-and `onerror` when the attempt fails (e.g. if the resource 404s). 
+and `error` when the attempt fails (e.g. if the resource 404s). 
 
 Imports try to load immediately. An easy way avoid headaches
 is to use the `onload`/`onerror` attributes:

@@ -180,17 +180,17 @@ if (supportsImports()) {
   // Use other libraries/require systems to load files.
 }
 </code></pre>
-<p>Browser support is still in the early days. Chrome 31 is the first browser to have an implementation. You can enable the flag by turning on <strong>Enable HTML Imports</strong> in <code>about:flags</code>. For other browsers, <a href="http://www.polymer-project.org/platform/html-imports.html">Polymer's polyfill</a> works great until things are widely supported.</p>
+<p>Browser support is still in the early days. Chrome 31 is the first browser to have an implementation. You can <strong>Enable HTML Imports</strong> in <code>about:flags</code>. For other browsers, <a href="http://www.polymer-project.org/platform/html-imports.html">Polymer's polyfill</a> works great until things are widely supported.</p>
 <figure>
   <img src="aboutflag.png">
   <figcaption><b>Enable HTML Imports</b> in <code>about:flags</code>.</figcpation>
 </figure>
 
-<p class="notice tip">Also <b>Enable experimental Web Platform features</b> to get the other bleeding edge web component goodies.</p>
+<p class="notice tip">Also <b>Enable experimental Web Platform features</b> to get the other bleeding edge Web Component goodies.</p>
 
 <h3 id="bundling">Bundling resources</h3>
 
-<p>Imports provide convention for bundling HTML/CSS/JS (even other HTML Imports) into a single deliverable. It's an intrinsic feature, but a powerful one. If you're creating a theme, library, or just want to segment your app into logical chunks, giving users a single URL is compelling. Heck, you could even deliver an entire app via an import. Think about that for a second.</p>
+<p>Imports provide a convention for bundling HTML/CSS/JS (even other HTML Imports) into a single deliverable. It's a powerful intrinsic feature. If you're creating a theme, library, or just want to segment your app into logical chunks, giving users a single URL is compelling. Heck, you could even deliver an entire app via an import. Think about that for a second.</p>
 <blockquote class="commentary talkinghead">Using only one URL, you can package together a single relocatable bundle of web goodness for others to consume.
 </blockquote>
 
@@ -220,7 +220,7 @@ of files. Instead, the entirety of Bootstrap is managed and wrapped up in an imp
 <h3 id="events">Load/error events</h3>
 
 <p>The <code>&lt;link&gt;</code> element fires a <code>load</code> event when an import is loaded successfully
-and <code>onerror</code> when the attempt fails (e.g. if the resource 404s). </p>
+and <code>error</code> when the attempt fails (e.g. if the resource 404s). </p>
 <p>Imports try to load immediately. An easy way avoid headaches
 is to use the <code>onload</code>/<code>onerror</code> attributes:</p>
 <pre class="prettyprint"><code>&lt;script async&gt;
